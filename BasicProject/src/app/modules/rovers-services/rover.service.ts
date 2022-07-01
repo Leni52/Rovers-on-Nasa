@@ -14,6 +14,11 @@ export class RoverService {
     return this.backendService.GETRequest(`v1/rovers/curiosity/photos?sol=1000&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa`);
 
   }
+  getAllPhotosFromOpportunity(): Observable<RoverPhotosResponseModel[]>{
+    return this.backendService.GETRequest(`v1/rovers/opportunity/photos?sol=1000&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa`);
 
-
+}
+getAllPhotosFromSpirit(): Observable<RoverPhotosResponseModel[]>{
+  return this.backendService.GETRequest(`v1/rovers/spirit/photos?sol=1000&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa`);
+}
 }

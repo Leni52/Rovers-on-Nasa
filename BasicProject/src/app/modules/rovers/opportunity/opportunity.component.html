@@ -1,1 +1,12 @@
-<p>opportunity works!</p>
+<div *ngFor="let element of secondArray">
+    
+    <mat-card>
+        <mat-card-title>{{element.id}}</mat-card-title>
+        <mat-card-title>{{element.sol}}</mat-card-title>
+        <mat-card-title>{{element.camera.name}}</mat-card-title>
+        <img mat-card-image src={{element.img_src}} />
+      
+    </mat-card>
+
+
+</div>

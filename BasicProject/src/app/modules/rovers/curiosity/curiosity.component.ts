@@ -29,8 +29,7 @@ export class CuriosityComponent implements OnInit {
     this.roverService
       .getAllPhotosFromCuriosity()
       .subscribe((data: RoverPhotosResponseModel[]) => {
-        this.allPhotosFromCuriosity = data;
-        console.log(data);
+        this.allPhotosFromCuriosity = data;       
         var firstArray = Object.values(this.allPhotosFromCuriosity)[0];
         var secondArray = Object.values(firstArray);
         this.secondArray = secondArray;
