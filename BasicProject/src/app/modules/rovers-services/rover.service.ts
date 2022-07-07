@@ -11,7 +11,7 @@ export class RoverService {
   constructor(private backendService: BackendService) { }
 
   getAllPhotosFromCuriosity(): Observable<RoverPhotosResponseModel[]>{
-    return this.backendService.GETRequest(`v1/rovers/curiosity/photos?sol=1000&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa`);
+    return this.backendService.GETRequest('v1/rovers/curiosity/photos?sol=1000'+'&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa');
 
   }
   getAllPhotosFromOpportunity(): Observable<RoverPhotosResponseModel[]>{

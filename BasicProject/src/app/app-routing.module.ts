@@ -6,7 +6,7 @@ import { OpportunityComponent } from './modules/rovers/opportunity/opportunity.c
 import { SpiritComponent } from './modules/rovers/spirit/spirit.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent, pathMatch: 'full'},
+  {path:'', component: HomeComponent},
   {path: 'curiosity', component: CuriosityComponent},
   {path: 'spirit', component:SpiritComponent},
   {path: 'opportunity', component: OpportunityComponent}

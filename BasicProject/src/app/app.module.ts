@@ -7,14 +7,20 @@ import { AppComponent } from './app.component';
 import { CuriosityComponent } from './modules/rovers/curiosity/curiosity.component';
 import { OpportunityComponent } from './modules/rovers/opportunity/opportunity.component';
 import { SpiritComponent } from './modules/rovers/spirit/spirit.component';
+import { HomeComponent } from './modules/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressBar, MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTableModule} from '@angular/material/table';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
     CuriosityComponent,
     OpportunityComponent,
-    SpiritComponent
+    SpiritComponent,
+    HomeComponent
   ],
   imports: [
     MatCardModule,
@@ -23,7 +29,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatTableModule,
+    NgxPaginationModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

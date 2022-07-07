@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { RoverPhotosResponseModel } from '../../models/RoverPhotosResponseModel';
 import { RoverService } from '../../rovers-services/rover.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-curiosity',
@@ -24,15 +25,27 @@ export class CuriosityComponent implements OnInit {
   secondArray: RoverPhotosResponseModel[] = [];
 
   constructor(public roverService: RoverService) {}
+  isLoading = false;
 
-  ngOnInit(): void {
+  totalLength: number = this.secondArray.length;
+  page: number = 1;
+
+  displayedColumns: string[] = ['id', 'sol', 'earth_date', 'camera.full_name', 'img_src'];
+
+  getAllPhotosFromCuriosity() {
     this.roverService
       .getAllPhotosFromCuriosity()
       .subscribe((data: RoverPhotosResponseModel[]) => {
-        this.allPhotosFromCuriosity = data;       
+        this.allPhotosFromCuriosity = data;
+        console.log(this.allPhotosFromCuriosity);
         var firstArray = Object.values(this.allPhotosFromCuriosity)[0];
         var secondArray = Object.values(firstArray);
         this.secondArray = secondArray;
+        this.totalLength = secondArray.length;
       });
+  }
+
+  ngOnInit(): void {
+    this.getAllPhotosFromCuriosity();
   }
 }
