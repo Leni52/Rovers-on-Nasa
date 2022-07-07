@@ -23,15 +23,14 @@ export class CuriosityComponent implements OnInit {
     [],
   ];
   secondArray: RoverPhotosResponseModel[] = [];
-
-  constructor(public roverService: RoverService) {}
+ 
   isLoading = false;
-
   totalLength: number = this.secondArray.length;
   page: number = 1;
-
   displayedColumns: string[] = ['id', 'sol', 'earth_date', 'camera.full_name', 'img_src'];
-
+  
+  constructor(public roverService: RoverService) {}
+  
   getAllPhotosFromCuriosity() {
     this.roverService
       .getAllPhotosFromCuriosity()
