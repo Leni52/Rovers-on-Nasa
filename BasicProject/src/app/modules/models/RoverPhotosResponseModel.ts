@@ -16,3 +16,11 @@ export class RoverPhotosResponseModel {
   }
   ){}
 }
+/*
+1 Sol is a martian solar day, one full rotation of Mars from the 
+perspective of the Sun. 
+Approximately 88775.24409 seconds or 
+24 hours, 39 minutes, 35.24409 seconds;
+ slightly variable due to orbital eccentricity. 
+ 1 sol = 88775.24409 s.
+*/
