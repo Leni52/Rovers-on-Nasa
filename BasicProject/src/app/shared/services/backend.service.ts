@@ -12,7 +12,7 @@ export class BackendService {
 
   GETRequest(requestTarget: string, responseType: any= 'json'):Observable<any>{
     return this.http.get(
-      environment.backendApiUrl + requestTarget,{
+      requestTarget,{
         observe:'body',
         responseType: responseType
       }

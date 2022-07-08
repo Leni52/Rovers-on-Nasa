@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
-  backendApiUrl: `https://api.nasa.gov/mars-photos/api/`,
+  production: true, 
+
   envName: "local"
 };
