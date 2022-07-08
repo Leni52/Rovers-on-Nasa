@@ -1,13 +1,18 @@
 <div class="mat-elevation-z8">
   <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
-  <table mat-table [dataSource]="secondArray |paginate: {itemsPerPage: 5, currentPage: page,
+  <table mat-table class="data-table" [dataSource]="secondArray |paginate: {itemsPerPage: 5, currentPage: page,
   totalItems: totalLength
   }">
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+   
+    <ng-container matColumnDef="rover.name">
+      <th mat-header-cell *matHeaderCellDef> Rover </th>
+      <td mat-cell *matCellDef="let element"> {{element.rover.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="rover.status">
+      <th mat-header-cell *matHeaderCellDef> Rover status </th>
+      <td mat-cell *matCellDef="let element"> {{element.rover.status}} </td>
     </ng-container>
 
     <ng-container matColumnDef="sol">
@@ -15,12 +20,12 @@
       <td mat-cell *matCellDef="let element"> {{element.sol}} </td>
     </ng-container>
     <ng-container matColumnDef="earth_date">
-      <th mat-header-cell *matHeaderCellDef> earth Date </th>
+      <th mat-header-cell *matHeaderCellDef> Earth Date </th>
       <td mat-cell *matCellDef="let element"> {{element.earth_date|date: 'medium' }} </td>
     </ng-container>
 
     <ng-container matColumnDef="camera.full_name">
-      <th mat-header-cell *matHeaderCellDef> camera name </th>
+      <th mat-header-cell *matHeaderCellDef> Camera Name </th>
       <td mat-cell *matCellDef="let element"> {{element.camera.full_name }} </td>
     </ng-container>
 
@@ -33,6 +38,6 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-<pagination-controls (pageChange)="page=$event"></pagination-controls>
+<pagination-controls class="paginator" (pageChange)="page=$event"></pagination-controls>
 
 </div>

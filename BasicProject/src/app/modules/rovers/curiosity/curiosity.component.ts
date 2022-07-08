@@ -27,7 +27,7 @@ export class CuriosityComponent implements OnInit {
   isLoading = false;
   totalLength: number = this.secondArray.length;
   page: number = 1;
-  displayedColumns: string[] = ['id', 'sol', 'earth_date', 'camera.full_name', 'img_src'];
+  displayedColumns: string[] = ['rover.name','rover.status', 'sol', 'earth_date', 'camera.full_name', 'img_src'];
   
   constructor(public roverService: RoverService) {}
   

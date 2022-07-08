@@ -16,10 +16,10 @@ export class RoverService {
 
   }
   getAllPhotosFromOpportunity(): Observable<RoverPhotosResponseModel[]>{
-    return this.backendService.GETRequest('https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000'+'&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa');
+    return this.backendService.GETRequest('https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=2000'+'&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa');
 
 }
 getAllPhotosFromSpirit(): Observable<RoverPhotosResponseModel[]>{
-  return this.backendService.GETRequest('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000'+'&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa');
+  return this.backendService.GETRequest('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1500'+'&api_key=o1aKYV1jBJgbgMcBpfiAnsuPNx8L9FtzL1SW4TRa');
 }
 }

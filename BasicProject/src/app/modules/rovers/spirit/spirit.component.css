@@ -1,0 +1,24 @@
+.data-table{
+    width: 90%;
+}
+.mat-column-sol{
+    width:10%;
+    text-align: center;
+}
+.mat-column-rover.name{
+    width:15%;
+    text-align: center;
+    border-right: 50px;
+    
+}
+.mat-column-img_src{
+    width:50%;
+    text-align: center;
+}
+img{
+    width: 30%;
+    height: 30%;
+}
+.mat-column-rover-status{
+    border-left: 100px;
+}
