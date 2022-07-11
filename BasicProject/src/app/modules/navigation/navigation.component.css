@@ -1,0 +1,14 @@
+li a{
+    display: block;
+    text-align: center;
+    padding: 12px;
+}
+ul{
+    list-style-type: none;
+}
+ul>li{
+    display: inline-block;
+}
+.navbar{
+    background-color: rgb(246, 240, 247);
+}

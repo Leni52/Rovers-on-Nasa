@@ -14,13 +14,15 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBar, MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTableModule} from '@angular/material/table';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NavigationComponent } from './modules/navigation/navigation.component';
 @NgModule({
   declarations: [
     AppComponent,
     CuriosityComponent,
     OpportunityComponent,
     SpiritComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent
   ],
   imports: [
     MatCardModule,

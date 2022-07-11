@@ -41,10 +41,14 @@ export class CuriosityComponent implements OnInit {
         var secondArray = Object.values(firstArray);
         this.secondArray = secondArray;
         this.totalLength = secondArray.length;
+        setTimeout(()=>{
+          this.isLoading=false;
+        },1000)
       });
   }
 
   ngOnInit(): void {
     this.getAllPhotosFromCuriosity();
+    this.isLoading= true;
   }
 }
