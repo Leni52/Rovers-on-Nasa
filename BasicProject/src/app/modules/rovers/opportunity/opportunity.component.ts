@@ -25,7 +25,8 @@ export class OpportunityComponent implements OnInit {
   totalLength: number = this.secondArray.length;
   page: number = 1;
   displayedColumns: string[] = [
-    'id',
+    'rover.name',
+    'rover.status',
     'sol',
     'earth_date',
     'camera.full_name',
@@ -43,14 +44,14 @@ export class OpportunityComponent implements OnInit {
         var secondArray = Object.values(firstArray);
         this.secondArray = secondArray;
         this.totalLength = secondArray.length;
-        setTimeout(()=>{
-          this.isLoading=false;
-        },1000)
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 1000);
       });
   }
 
   ngOnInit(): void {
     this.getAllPhotosFromOpportunity();
-    this.isLoading= true;
+    this.isLoading = true;
   }
 }

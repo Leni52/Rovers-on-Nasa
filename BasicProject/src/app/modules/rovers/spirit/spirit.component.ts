@@ -25,7 +25,8 @@ export class SpiritComponent implements OnInit {
   totalLength: number = this.secondArray.length;
   page: number = 1;
   displayedColumns: string[] = [
-    'id',
+    'rover.name',
+    'rover.status',
     'sol',
     'earth_date',
     'camera.full_name',
