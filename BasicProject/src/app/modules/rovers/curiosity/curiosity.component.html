@@ -1,14 +1,17 @@
+
+
 <div class="mat-elevation-z8">
   <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
-  <table mat-table class="data-table" [dataSource]="secondArray |paginate: {itemsPerPage: 5, currentPage: page,
+  <table mat-table class="data-table recent-game-item" [dataSource]="secondArray |paginate: {itemsPerPage: 5, currentPage: page,
   totalItems: totalLength
   }">
 
-
+  <div  class="rgi-content">
     <ng-container matColumnDef="rover.name">
       <th mat-header-cell *matHeaderCellDef> Rover </th>
-      <td mat-cell *matCellDef="let element"> {{element.rover.name}} </td>
+      <td mat-cell *matCellDef="let element" class="rgi-content recent-game-item"> {{element.rover.name}} </td>
     </ng-container>
+  </div>
 
     <ng-container matColumnDef="rover.status">
       <th mat-header-cell *matHeaderCellDef> Rover status </th>
@@ -21,7 +24,7 @@
     </ng-container>
     <ng-container matColumnDef="earth_date">
       <th mat-header-cell *matHeaderCellDef> Earth Date </th>
-      <td mat-cell *matCellDef="let element"> {{element.earth_date|date: 'medium' }} </td>
+      <td mat-cell *matCellDef="let element"> {{element.earth_date|date: 'dd-MM-yyyy' }} </td>
     </ng-container>
 
     <ng-container matColumnDef="camera.full_name">
@@ -41,3 +44,8 @@
     <pagination-controls (pageChange)="page=$event"></pagination-controls>
   </div>
 </div>
+
+
+
+
+ 

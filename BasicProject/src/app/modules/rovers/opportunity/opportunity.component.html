@@ -36,7 +36,7 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
-  <pagination-controls (pageChange)="page=$event"></pagination-controls>
-
+  <div class="paginator">
+    <pagination-controls (pageChange)="page=$event"></pagination-controls>
+  </div>
 </div>

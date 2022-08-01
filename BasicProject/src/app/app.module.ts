@@ -10,11 +10,12 @@ import { SpiritComponent } from './modules/rovers/spirit/spirit.component';
 import { HomeComponent } from './modules/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
-import {MatProgressBar, MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatPaginatorModule} from '@angular/material/paginator';
+import { MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTableModule} from '@angular/material/table';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NavigationComponent } from './modules/navigation/navigation.component';
+import { FooterComponent } from './modules/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { NavigationComponent } from './modules/navigation/navigation.component';
     OpportunityComponent,
     SpiritComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    FooterComponent
   ],
   imports: [
     MatCardModule,
